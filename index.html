@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud Operations</title>
+    <link rel="icon" href="./img/cogwheel.png">
+    <link rel="stylesheet" href="./CSS/all.min.css">
+    <link rel="stylesheet" href="./CSS/main.css">
+</head>
+<body>
+    <div class="cardData">
+
+    </div>
+    <section class="bodyOfAll">
+        <section class="form">
+            <h1>Crud Operations</h1>
+            <h2>Add New Product <i class="fa-solid fa-cart-plus"></i></h2>
+            <div class="container">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label>Product Title</label>
+                            <input class="form-control" type="text" placeholder="Product Title" id="title">
+                            <span class="V_span invalid_Span">* You Must Enter Product Title</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row-item" id="AllCost">
+                    <div class="item">
+                        <label>Price</label>
+                        <input class="form-control inputNum" id="price" type="number" placeholder="Price">
+                        <span class="V_span invalid_Span">* You Must Enter Price at lest 0 (Type Must be Number)</span>
+                    </div>
+                    <div class="item">
+                        <label>Tax %</label>
+                        <input class="form-control inputNum" id="tax" type="number" placeholder="Tax%">
+                        <span class="V_span invalid_Span">* You Must Enter Tax at lest 0 (Type Must be Number)</span>
+                    </div>
+                    <div class="item">
+                        <label>Discount</label>
+                        <input class="form-control inputNum" id="discount" type="number" placeholder="Discount">
+                        <span class="V_span invalid_Span">* You Must Enter Discount at lest 0 (Type Must be Number)</span>
+                    </div>
+                </div>
+                <div class="form-data">
+                    <div class="form-group">
+                        <label>Total</label>
+                        <input class="form-control" id="total"  type="text" placeholder="Total" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label>Count</label>
+                        <input class="form-control inputNum" type="number" placeholder="Count of items" id="count">
+                        <span class="V_span invalid_Span">* You Must Enter Count at lest 1 (Type Must be Number)</span>
+                    </div>
+                    <div class="form-group">
+                        <button class="click" id="addProduct">Add Product</button>
+                    </div>
+                </div>
+            </div>
+            <h1>All Product List</h1>
+            <div class="container">
+                <div class="Products">
+                    <div class="form-group">
+                        <button class="click" id="deleteButton">Delete all <span id="countButton"></span></button>
+                    </div>
+                    <div class="products-List">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Product Name</th>
+                                    <th>Total</th>
+                                    <th colspan="3" class="action">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbody">
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="Footer">
+            <h3>Created By:<a href="https://github.com/MohamedASAK"> <i class="fa-brands fa-github"></i>  Mohamed Adel</a></h3>
+        </footer>
+    </section>
+    <script src="./JS/main.js"></script>
+</body>
+</html>

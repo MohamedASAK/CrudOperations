@@ -1,0 +1,391 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(32, 55, 55);
+    overflow-x: hidden;
+    max-width: 1500px;
+    width: 100vw;
+    margin: auto;
+}
+.opacityAll{
+    opacity: 0.2;
+    display: none;
+}
+.form h1{
+    text-align: center;
+    font-size: 30px;
+    margin: 15px;
+    color: white;
+}
+.form h2{
+    text-align: center;
+    margin: 15px;
+    color: white;
+}
+.container{
+    border: 2px solid black;
+    border-radius: 15px;
+    box-shadow: 0px 5px 200px gray;
+}
+.form .container{
+    background-color: rgb(97, 131, 133);
+    margin: 30px auto;
+    width: 90%;
+}
+.form-control{
+    background-color: lightgray;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 10px;
+    width: 100%;
+}
+.form-control.form-control:hover{
+    box-shadow: 0px 0px 10px crimson;
+    transform: scale(1.02,1.02);
+    transition: all 0.5s;
+}
+.form-control:focus{
+    box-shadow: 0px 0px 10px chocolate;
+    outline: 1px solid chocolate;
+}
+.form-control::placeholder{
+    color: black;
+    font-size: 15px;
+}
+.form-group button{
+    background-color: lightgray;
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bold;
+    margin: 15px auto;
+    font-size: 14px;
+    padding: 5px;
+    width: 100%;
+}
+.form-group button:hover{
+    box-shadow: 0px 0px 20px lightcoral;
+    background-color: lightcoral;
+    transform: scale(1.02,1.02);
+    transition: all 0.5s;
+    color: white;
+}
+.form-group button .updateBtn{
+    background-color: greenyellow;
+}
+.form-group button .updateBtn:hover{
+    box-shadow: 0px 0px 20px lawngreen;
+    background-color: lawngreen;
+    transform: scale(1.02,1.02);
+    transition: all 0.5s;
+    color: white;
+}
+.card{
+    padding: 10px 0px;
+}
+.card-body{
+    padding: 5px 0px;
+}
+.card-body .form-group {
+    text-align: center;
+    margin: 0px 5px;
+}
+.card-body .form-group .form-control{
+    flex-wrap: wrap;
+    display: flex;
+    margin: auto;
+    width: 90%;
+}
+.row-item{
+    justify-content: space-evenly;
+    display: flex;
+    margin: auto;
+    width: 90%;
+}
+.item{
+    margin: 5px;
+    width: 33%;
+}
+.item .form-control{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+}
+.form-data{
+    margin: 5px;
+}
+.form-data .form-group{
+    margin: auto;
+    width: 90%;
+}
+.form-data .form-group .form-control{
+    margin: 5px auto;
+}
+label{
+    font-size: 18px;
+    color: white;
+}
+/*Products Table*/
+.Products{
+    padding: 20px 0px;
+    width: 90%;
+    margin: auto;
+}
+.Products .form-group{
+    width: 100%;
+    margin: auto;
+    display: block;
+}
+.products-List .table{
+    background-color: gray;
+    color: whitesmoke;
+    text-align: center;
+}
+.products-List .table tr th,td{
+    border-right: 2px solid white;
+    padding: 10px;
+    width: 1%;
+}
+.products-List .table tr .action{
+    border-right: 0px;
+}
+.products-List .table tr{
+    outline: 2px solid white;
+}
+.products-List .table tbody tr td{
+    font-weight: bold;
+}
+table a{
+    width: 25px;
+}
+table a i{
+    color: white;
+    cursor: pointer;
+    font-size: 25px;
+}
+.fa-pen-to-square{
+    color: lightgreen;
+    text-shadow: 0px 0px 10px green;
+}
+.fa-trash{
+    color: rgb(255, 122, 122);
+    text-shadow: 0px 0px 10px red;
+
+}
+.fa-eye{
+    color: yellow;
+    text-shadow: 0px 0px 10px yellow;
+}
+.none{
+    display: none;
+}
+.cardData{
+    background-color: rgba(162, 155, 155, 0.599);
+    position: absolute;
+    display: none;
+    padding: 20px;
+    height: 50%;
+    width: 50%;
+    left: 25%;
+    right: 25%;
+    top: 25%;
+}
+.cardData h4{
+    color: black;
+    font-weight: bold;
+    font-size: 50px;
+}
+/*validation*/
+.invalid{
+    box-shadow: 0px 0px 10px red;
+    outline: 1px solid red;
+    border: 2px solid red;
+    font-size: 15px;
+    display: block;
+    color: red;
+
+}
+.invalid_Span{
+    display: none;
+}
+.invalid_Number{
+    display: none;
+}
+.invalidSpan{
+    text-align: center;
+    font-weight: bold;
+    margin-top: 12px;
+    font-size: 12px;
+    display: block;
+    color: red;
+}
+
+.Footer{
+    text-align: center;
+    color: white;
+}
+.Footer a{
+    text-decoration: none;
+    color: white;
+}
+@media(max-width: 1024px){    
+    body{
+        width: 100vw;
+    }
+    .form .container{
+        width: 90%;
+    }
+    .form-control{
+        width: 100%;
+    }
+    .card-body .form-group .form-control{
+        width: 90%;
+    }
+    .row-item{
+        width: 90%;
+    }
+    .item{
+        width: 33.33%;
+    }
+    .item .form-control{
+        width: 100%;
+    }
+    .form-data{
+        margin: 5px;
+    }
+    .form-data .form-group{
+        width: 90%;
+    }
+    label{
+        font-size: 16px;
+    }
+    /*Products Table*/
+    .Products{
+        width: 90%;
+    }
+    .Products .form-group{
+        width: 100%;
+    }
+    table a i{
+        font-size: 14px;
+    }
+    .cardData{
+        padding: 20px;
+        height: 40%;
+        width: 50%;
+        top: 25%;
+        left: 25%;
+        right: 25%;
+    }
+    .cardData h4{
+        font-size: 40px;
+    }
+    /*validation*/
+    .invalid{
+        font-size: 15px;
+    }
+    .invalidSpan{
+        margin-top: 12px;
+        font-size: 12px;
+    }
+}
+@media(max-width: 768px){
+    body{
+        width: 100vw;
+    }
+    .form .container{
+        width: 90%;
+    }
+    .item .form-control{
+        width: 100%;
+    }
+    .form-data .form-group{
+        width: 90%;
+    }
+    .form-control::placeholder{
+        font-size: 14px;
+    }
+    label{
+        font-size: 18px;
+    }
+    /*Products Table*/
+    .Products{
+        width: 90%;
+    }
+    .Products .form-group{
+        width: 100%;
+    }
+    table a i{
+        font-size: 14px;
+    }
+    .cardData{
+        padding: 20px;
+        height: 100vh;
+        width: 100%;
+        left: 0%;
+        right: 0%;
+    }
+    .cardData h4{
+        font-size: 40px;
+    }
+    /*validation*/
+    .invalid{
+        font-size: 15px;
+    }
+    .invalidSpan{
+        margin-top: 12px;
+        font-size: 12px;
+    }
+}
+@media(max-width: 560px){
+    body{
+        width: 100vw;
+    }
+    .form .container{
+        width: 95%;
+    }
+    .form-data .form-group{
+        width: 90%;
+    }
+    .form-control::placeholder{
+        font-size: 12px;
+    }
+    label{
+        font-size: 16px;
+    }
+    /*Products Table*/
+    .Products{
+        width: 90%;
+    }
+    table a i{
+        font-size: 10px;
+    }
+    .products-List .table tbody tr td{
+        font-size: 12px;
+    }
+    .cardData{
+        height: 100vh;
+        width: 100%;
+        top: 0%;
+        left: 0%;
+        right: 0%;
+    }
+    .cardData h4{
+        font-size: 30px;
+    }
+    /*validation*/
+    .invalid{
+        font-size: 12px;
+    }
+    .invalidSpan{
+        margin-top: 12px;
+        font-size: 12px;
+    }
+}
