@@ -12,11 +12,11 @@ let totalPrice = document.querySelector("#total");
 let title = document.querySelector("#title");
 let count = document.querySelector("#count");
 let tbody = document.querySelector("tbody");
+let validationErrors = false;
 let mode = "create";
 let globalIndex;
 let Products;
 /* ------------------------------Validation Errors------------------------------ */
-let validationErrors = false;
 
 // General inputs
 for (let i = 0; i < allInputs.length; i++) {
@@ -138,7 +138,7 @@ window.onload = () =>{
 //Get data from local storage if it exist 
 let checkLocalStorage = () => {
     if(localStorage.Products != null){
-        Products = JSON.stringify(localStorage.Products);
+        Products = JSON.parse(localStorage.Products);
         renderProductsData(); 
     }
     else{
@@ -163,9 +163,10 @@ let renderProductsData = () => {
             </tr>
             `
         }
-        tbody.innerHTML = productData;
     }
+    tbody.innerHTML = productData;
 }
+
 let productDetails = (i) => {
     globalIndex = i;
     bodyOfAll.classList.add("opacityAll");
@@ -192,6 +193,7 @@ let productDetails = (i) => {
     bodyOfAll.classList.remove("opacityAll");
     cardData.style.display = "none";
 }
+
 let checkList = () => {
     if(Products.length == 0){
         deleteAllList.style.display = "none";
